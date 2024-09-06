@@ -2591,26 +2591,6 @@ spawn(function()
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>BOMBACLAT KIWWSS<Color=/>"):Display()
     wait(.36)
 end)
- 
------Label--------------------
-local Section = W:AddSection({
-    Name = "Credit"
-})
-
-
-W:AddLabel("bblan hub")
-
-local Section = W:AddSection({
-    Name = "Update"
-})
-
-
-W:AddLabel("jude bakla")
-W:AddLabel("bblan hub SCRIPT")
-W:AddLabel("Paul Adrianne C Bonaobra")
-local Section = W:AddSection({
-    Name = "Status"
-})
 
 local locallv = W:AddLabel("Level")
     
@@ -11242,86 +11222,6 @@ spawn(function()
         end
     end)
 
-    spawn(function()
-        while wait() do
-            pcall(function()
-                if _G.TurnKen then
-                    repeat task.wait()
-                        if not game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") then
-                            game:GetService('VirtualUser'):CaptureController()
-                            game:GetService('VirtualUser'):SetKeyDown('0x65')
-                            wait(2)
-                            game:GetService('VirtualUser'):SetKeyUp('0x65')
-                        end
-                    until game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui:FindFirstChild("ImageLabel") or not _G.AutoObservation
-                end
-            end)
-        end
-    end)
-
-    spawn(function()
-        while wait() do
-        if _G.Hopfinddao then
-            if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") or game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-                if HighestPointRealCFrame and (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - HighestPointRealCFrame.Position).Magnitude > 10 then
-                topos(getHighestPoint().CFrame * CFrame.new(0, 211.88, 0))
-                    end
-            elseif not game:GetService("Workspace").Map:FindFirstChild("MysticIsland") or not game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
-                Hop()
-                end
-            end
-        end
-    end)
-
-    spawn(function()
-        while wait() do
-            if _G.Hopfindmoon then
-            if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149052" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149431" then
-                wait(2.0)
-                OrionLib:MakeNotification({
-                    Name = "bblan hub",
-                    Content = "Turn Off Hop Find Moon Please",
-                    Image = "rbxassetid://8192162908",
-                    Time = 5
-                })
-            elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
-                Hop()
-                OrionLib:MakeNotification({
-                    Name = "bblan hub",
-                    Content = "Hop Server",
-                    Image = "rbxassetid://8192162908",
-                    Time = 5
-                })
-            elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
-                Hop()
-                OrionLib:MakeNotification({
-                    Name = "bblan hub",
-                    Content = "Hop Server",
-                    Image = "rbxassetid://8192162908",
-                    Time = 5
-                })
-            elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
-                Hop()
-                OrionLib:MakeNotification({
-                    Name = "bblan hub",
-                    Content = "Hop Server",
-                    Image = "rbxassetid://8192162908",
-                    Time = 5
-                })
-            else
-                Hop()
-                end
-            end
-        end
-    end)
-
-OrionLib:MakeNotification({
-        Name = "bblan hub",
-        Content = "Loading script complete!, You can now enable the function!",
-        Image = "rbxassetid://8192162908",
-        Time = 5
-    })
-
 _G.Remove_Effect = true
 
 spawn(function()
@@ -11334,28 +11234,4 @@ spawn(function()
     end
 end)
 
-spawn(function()
-    game:GetService('RunService').Stepped:Connect(function()
-        if _G.Remove_Effect then
-            for i, v in pairs(game:GetService("ReplicatedStorage").Effect.Container:GetChildren()) do
-                if v.Name == "Death" then
-                    v:Destroy() 
-                end
-            end
-        end
-    end)
-end)
 
-OrionLib:Init()
-
-OrionLib:MakeNotification({
-    Name = "bblan hub",
-    Content = "Loading Config Complete!!",
-    Image = "rbxassetid://8192162908",
-    Time = 5
-})on({
-    Name = "bblan hub",
-    Content = "Loading Config Complete!!",
-    Image = "rbxassetid://8192162908",
-    Time = 5
-})
